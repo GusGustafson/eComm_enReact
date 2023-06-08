@@ -41,8 +41,26 @@ img{
 
 /* Tipografía */
 
-a{text-decoration: none;} /* Esta línea parece que no funciona bien en React, así que creo la siguiente línea, que sí funciona. */
-.menu a{text-decoration: none;}
+a{text-decoration: none;} /* Estas dos líneas parece que no funcionan bien en React, así que creo la siguiente línea, que sí funciona. */
+a{color: var(--principal);} /* Estas dos líneas parece que no funcionan bien en React, así que creo la siguiente línea, que sí funciona. */
+.menu a{
+    text-decoration: none;
+    color: var(--principal);
+}
+.franja-superior a{
+    text-decoration: none;
+    color: var(--negro);
+}
+#comprar{
+    color: var(--blanco);
+}
+#comprar:hover{
+    color: var(--resalto);
+}
+.bi-search{
+    color: var(--negro);
+}
+
 
 p{margin-bottom: 1rem;}
 
@@ -66,10 +84,6 @@ h4, .h4{font-size: 1.563rem;}
 h5, .h5{font-size: 1.25rem;}
 
 small, .text_small{font-size: 0.8rem;}
-
-a{
-    color: var(--principal);
-}
 
 /* Componentes */
 /* Ahora ya vienen todos los apartados de los distintos componentes de la página. */
@@ -134,7 +148,7 @@ input:focus{
 .input-group{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 8px
 }
 
 .input-group .error{ 
@@ -308,6 +322,7 @@ header .container{
 /* Nav */
 
 #navegacion{
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
     padding: 16px;

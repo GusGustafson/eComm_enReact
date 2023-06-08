@@ -1,5 +1,7 @@
 import "./App.css";
 import Home from "./views/Home";
+import Policy from "./views/Policy";
+import AllProducts from "./views/AllProducts";
 // import Header from "./components/Header";
 // import Navigator from "./components/Navigator";
 // import Main from "./components/Main";
@@ -18,6 +20,8 @@ function App() {
   return (
     <>
       <Home />
+      <Policy />
+      <AllProducts />
       {/* <Header />
       <Navigator />
       <Main />

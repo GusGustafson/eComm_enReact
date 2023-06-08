@@ -9,12 +9,14 @@ import "../../style.css";
 function Footer() {
   return (
     <footer className="container bg-dark text-light d-flex justify-content-evenly mt-5">
-        <div className="container">
-            <img src={logo} alt="logo" width="50px" />
-            <h4>My <span>Releevant</span> Store</h4>
-            <div className="d-flex">
+        <div className="container d-flex flex-column w-75 mt-3">
+            <div className="container d-flex">
+                <img src={logo} alt="logo" width="50px" />
+                <h4>My <span>Releevant</span> Store</h4>
+            </div>
+            <div className="d-flex mt-5">
                 <div>
-                    <ul className="menu d-flex flex-column me-3">
+                    <ul className="menu d-flex flex-column me-5">
                         <li>Centro de ayuda</li>
                         <li>Servicio al consumidor</li>
                         <li>Escríbenos</li>
@@ -31,21 +33,25 @@ function Footer() {
                 </div>
             </div>
         </div>
-        <div>
+        <div className="container d-flex flex-column mt-3">
             <h4>Únete a nuestra newsletter y recibe ofertas diarias</h4>
             <form>
-                <input type="email" name="email" placeholder="Introduce tu email" />
+                <div className="d-flex flex-row">
+                <input type="email" name="email" placeholder="Introduce tu email" className="d-flex w-75 me-2"/>
                 <input type="submit" name="botonSuscribir" value="Suscribirme" />
+                </div>
                 <label htmlFor="politica">
                     <input type="checkbox" name="politica" id="politica"/>Acepto la <a href="politica.html" name="politica">política de privacidad</a> de esta web
                 </label>
             </form>
             <hr />
             <h4>Síguenos en redes</h4>
-            <img src={facebook} alt="iconoFacebook" width="30px" />
-            <img src={instagram} alt="iconoInstagram" width="30px" />
-            <img src={facebook} alt="iconoFacebook" width="30px" />
-            <img src={instagram} alt="iconoInstagram" width="30px" />
+            <div>
+                <img src={facebook} alt="iconoFacebook" width="30px" />
+                <img src={instagram} alt="iconoInstagram" width="30px" />
+                <img src={facebook} alt="iconoFacebook" width="30px" />
+                <img src={instagram} alt="iconoInstagram" width="30px" />
+            </div>
         </div>
     </footer>
 
