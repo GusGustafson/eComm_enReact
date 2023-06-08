@@ -9,7 +9,7 @@ import "../../style.css";
 
 function Section() {
   return (
-    <section className="container d-flex justify-content-evenly">
+    <section className="container d-flex justify-content-evenly mt-5">
       {/* En esta línea de arriba incluyo "d-flex just..." para que me ponga los elementos uno junto a otro, no uno encima de otro. */}
       <div>
         <img src={pago} alt="iconoPago" name="pagoSeguro" width="50px" />

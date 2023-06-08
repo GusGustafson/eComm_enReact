@@ -7,7 +7,7 @@ function Navigator() {
   return (
     <nav className="container" id="navegacion">
       <div className="col-izq">
-        <ul className="menu">
+        <ul className="menu d-flex gap-3">
           <li>
             <a className="link" href="productos.html" name="productos">
               Todos los productos

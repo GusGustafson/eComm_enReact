@@ -1,8 +1,9 @@
 import "../../style.css";
+import Button from "../../components/Button";
 
 function Card({ cards }) {
   return (
-    <div className="d-flex justify-content-evenly" >
+    <div className="container d-flex justify-content-evenly mt-5" >
       {/* Esta línea de arriba la incluyo para que me ponga las cards una junto a otra, no una encima de otra. */}
       {cards.map((card, index) => (
         <div key={index} className="card" style={{ width: "18rem" }}>
@@ -24,8 +25,8 @@ function Card({ cards }) {
             </div>
             <p>{card.descripcion}</p>
             <div className="card-actions">
-            <button type="button" className="button anadir">Añadir</button>
-            <a href="detallesProducto.html" name="verDetalles" className="button button-secundario">Ver</a>
+            <Button buttonClass="button anadir" text="Añadir" />
+            <Button buttonClass="button button-secundario" text="Ver" />
             </div>
         </div>
         </div>
