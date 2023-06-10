@@ -1,7 +1,8 @@
 import "../../style.css";
 {
-  /* Aquí importo mi archivo CSS para que pueda usarlo en todo este componente */
+  /* Aquí arriba importo mi archivo CSS para que pueda usarlo en todo este componente */
 }
+import {Link} from 'react-router-dom';
 
 function Navigator() {
   return (
@@ -9,29 +10,19 @@ function Navigator() {
       <div className="col-izq">
         <ul className="menu d-flex gap-3">
           <li>
-            <a className="link" href="productos.html" name="productos">
-              Todos los productos
-            </a>
+            <Link to="allproducts">Todos los productos</Link>
           </li>
           <li>
-            <a href="nosotros.html" name="indice">
-              Sobre nosotros
-            </a>
+          <Link to="nosotros">Sobre nosotros</Link>
           </li>
           <li>
-            <a href="contacto.html" name="contacto">
-              Contacto
-            </a>
+          <Link to="contacto">Contacto</Link>
           </li>
           <li>
-            <a href="gadgets.html" name="gadgets">
-              Gadgets
-            </a>
+          <Link to="gadgets">Gadgets</Link>
           </li>
           <li>
-            <a href="ofertas.html" name="ofertas">
-              Ofertas
-            </a>
+          <Link to="ofertas">Ofertas</Link>
           </li>
         </ul>
       </div>

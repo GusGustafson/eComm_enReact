@@ -1,7 +1,5 @@
 import "./App.css";
 import Home from "./views/Home";
-import Policy from "./views/Policy";
-import AllProducts from "./views/AllProducts";
 // import Header from "./components/Header";
 // import Navigator from "./components/Navigator";
 // import Main from "./components/Main";
@@ -11,25 +9,44 @@ import AllProducts from "./views/AllProducts";
 // import Button from "./components/Button";
 // Todo esto de arriba lo quitamos de aquí porque nos lo llevamos a la página de inicio "Home". También la siguiente de abajo.
 
-
 // import { card } from "./components/Card/CardsDummy";
 // Esta línea la añadimos para IMPORTAR el array "card" (DEBE IR ENTRE LLAVES) que EXPORTAMOS desde el archivo "CardsDummy.js".
 // De esta forma, hacemos que este "App.jsx" no esté tan congestionado de variables, arrays y objetos.
 
+// PEEERO como ahora ya aprendimos a usar react-router-dom, ahora metemos las "import" con las referencias a las distintas
+// "páginas HTML" para usarlas con react-router-dom:
+import AllProducts from "./views/AllProducts";
+import Layout from "./components/Layout";
+import Nosotros from "./views/Nosotros";
+// import Contact from "./views/Contact";
+import Gadgets from "./views/Gadgets";
+// import Ofertas from "./views/Ofertas";
+import Policy from "./views/Policy";
+
+import { Routes, Route } from "react-router-dom";
+import NotFound from "./views/NotFound/NotFound";
+
 function App() {
   return (
     <>
-      <Home />
-      <Policy />
-      <AllProducts />
-      {/* <Header />
-      <Navigator />
-      <Main />
-      <Card cards={card} />
-      <Section />
-      <Footer />
-      <Button />
-      // Todo esto de arriba lo quitamos de aquí porque nos lo llevamos a la página de inicio "Home". */}
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="allproducts" element={<AllProducts />} />
+          <Route path="nosotros" element={<Nosotros/>}/>
+          <Route path="policy" element={<Policy />} />
+          <Route path="gadgets" element={<Gadgets />} />
+        </Route>
+        <Route path="*" element={<NotFound/>}/>
+        {/* <Header />
+        <Navigator />
+        <Main />
+        <Card cards={card} />
+        <Section />
+        <Footer />
+        <Button />
+        // Todo esto de arriba lo quitamos de aquí porque nos lo llevamos a la página de inicio "Home". */}
+      </Routes>
     </>
   );
 }

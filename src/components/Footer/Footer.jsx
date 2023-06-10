@@ -5,6 +5,7 @@ import "../../style.css";
 {
   /* Aquí importo mi archivo CSS para que pueda usarlo en todo este componente */
 }
+import {Link} from 'react-router-dom';
 
 function Footer() {
   return (
@@ -25,7 +26,7 @@ function Footer() {
                 </div>
                 <div>
                     <ul className="menu d-flex flex-column ms-3">
-                        <li><a href="politica.html" name="politica">Política de privacidad</a></li>
+                        <li><Link to="policy">Política de privacidad</Link></li>
                         <li>Condiciones de compra</li>
                         <li>Opiniones de clientes</li>
                         <li>Aviso de privacidad y cookies</li>
@@ -41,7 +42,7 @@ function Footer() {
                 <input type="submit" name="botonSuscribir" value="Suscribirme" />
                 </div>
                 <label htmlFor="politica">
-                    <input type="checkbox" name="politica" id="politica"/>Acepto la <a href="politica.html" name="politica">política de privacidad</a> de esta web
+                    <input type="checkbox" name="politica" id="politica"/>Acepto la <Link to="policy">Política de privacidad</Link> de esta web
                 </label>
             </form>
             <hr />

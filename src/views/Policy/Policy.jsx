@@ -1,13 +1,8 @@
-import Header from "../../components/Header";
-import Navigator from "../../components/Navigator";
 import Section from "../../components/Section";
-import Footer from "../../components/Footer";
 
 function Policy() {
   return (
     <>
-      <Header />
-      <Navigator />
       <main className="container">
         <h3>Política de privacidad</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi delectus deserunt alias totam reprehenderit pariatur recusandae possimus earum placeat nulla accusamus officiis aliquid, molestiae impedit amet voluptatem illum tenetur ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam facere, praesentium mollitia voluptatum rem minima rerum eum, sit veritatis tempore, nesciunt dignissimos voluptas exercitationem doloribus commodi facilis. Earum, molestiae.</p>
@@ -19,7 +14,6 @@ function Policy() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iste cumque adipisci libero, soluta reiciendis ea veniam nulla sequi rerum aliquid consequatur dolorem! Voluptates cum hic vel molestias recusandae quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab corrupti quaerat dolor provident, similique fuga libero dicta. Maxime asperiores, quidem impedit sint excepturi veritatis nostrum ad rem! Iure, recusandae vitae!</p>
     </main>
       <Section />
-      <Footer />
     </>
   );
 }

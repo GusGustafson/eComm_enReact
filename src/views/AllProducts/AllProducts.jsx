@@ -1,19 +1,28 @@
-import Header from "../../components/Header";
-import Navigator from "../../components/Navigator";
 import Card from "../../components/Card";
 import { card } from "../../components/Card/CardsDummy";
 import Section from "../../components/Section";
-import Footer from "../../components/Footer";
+import {Link} from 'react-router-dom';
 
 function Home() {
   return (
     <>
-      <Header />
-      <Navigator />
-      <main className="container">
+      <div className="jumbotron bg-gradient-light">
+        <div className="container">
+            <h1>Los mejores gadgets de octubre</h1>
+            <p>Consigue ahora los mejores productos de My Releevant Store</p>
+            <Link to="/gadgets" className="button">Ver ofertas de gadgets</Link>
+            {/* Aquí arriba tengo que poner la barra diagonal porque este botón está dentro de AllProducts.jsx, no de otro componente.*/}
+            {/* Y esa barra es una orden imperativa para decirle "ve a gadgets" (si no la pongo, va a "allproducts/gadgets").*/}
+        </div>
+      </div>
+      <main className="container d-flex justify-content-evenly mt-5">
+        <div>
         <h2>Gadgets de cocina</h2>
         <p>Consigue ahora los mejores productos de My Releevant Store</p>
-        <a href="gadgets.html" name="gadgets" className="button button-secundario">Ver todos</a>
+        </div>
+        <div>
+          <a href="gadgets.html" name="gadgets" className="button button-secundario">Ver todos</a>
+        </div>
       </main>
       <Card cards={card} />
       <section className="container testimonios d-flex mt-5">
@@ -35,7 +44,6 @@ function Home() {
         </div>
       </section>
       <Section />
-      <Footer />
     </>
   );
 }

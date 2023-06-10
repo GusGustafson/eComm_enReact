@@ -1,15 +1,8 @@
-import Header from "../../components/Header";
-import Navigator from "../../components/Navigator";
-import Card from "../../components/Card";
-import { card } from "../../components/Card/CardsDummy";
 import Section from "../../components/Section";
-import Footer from "../../components/Footer";
 
 function Home() {
   return (
     <>
-      <Header />
-      <Navigator />
       <div className="container text-center">
         <div className="row">
           <div className="col">
@@ -71,9 +64,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Card cards={card} />
       <Section />
-      <Footer />
     </>
   );
 }
