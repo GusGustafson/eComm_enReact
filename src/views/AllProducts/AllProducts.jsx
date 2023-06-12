@@ -1,12 +1,11 @@
 import Card from "../../components/Card";
 import { card } from "../../components/Card/CardsDummy";
-import Section from "../../components/Section";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <>
-      <div className="jumbotron bg-gradient-light">
+      <div className="jumbotron">
         <div className="container">
             <h1>Los mejores gadgets de octubre</h1>
             <p>Consigue ahora los mejores productos de My Releevant Store</p>
@@ -21,7 +20,7 @@ function Home() {
         <p>Consigue ahora los mejores productos de My Releevant Store</p>
         </div>
         <div>
-          <a href="gadgets.html" name="gadgets" className="button button-secundario">Ver todos</a>
+          <Link to="/gadgets" className="button button-secundario">Ver todos</Link>
         </div>
       </main>
       <Card cards={card} />
@@ -43,7 +42,6 @@ function Home() {
             </div>
         </div>
       </section>
-      <Section />
     </>
   );
 }

@@ -1,4 +1,3 @@
-import Section from "../../components/Section";
 
 function Gadgets() {
   return (
@@ -6,7 +5,6 @@ function Gadgets() {
       <main className="container">
         <h3>Gadgets</h3>
       </main>
-      <Section />
     </>
   );
 }

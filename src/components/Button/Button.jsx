@@ -5,7 +5,7 @@ import "../../style.css";
 
 function Button({buttonClass, text}) {
   return (
-    <a href="detallesProducto.html" name="verDetalles" className={buttonClass}>{text}</a>
+      <button className={buttonClass}>{text}</button>
   );
 }
 

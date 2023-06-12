@@ -1,12 +1,13 @@
 import "../../style.css";
 import Button from "../../components/Button";
+import { Link } from 'react-router-dom';
 
 function Card({ cards }) {
   return (
     <div className="container d-flex justify-content-evenly mt-5" >
       {/* Esta línea de arriba la incluyo para que me ponga las cards una junto a otra, no una encima de otra. */}
       {cards.map((card, index) => (
-        <div key={index} className="card" style={{ width: "18rem" }}>
+        <div key={index} className="card" style={{ width: "24rem" }}>
         <img
             src={card.image}
             alt="bicicleta"
@@ -25,8 +26,10 @@ function Card({ cards }) {
             </div>
             <p>{card.descripcion}</p>
             <div className="card-actions">
-            <Button buttonClass="button anadir" text="Añadir" />
-            <Button buttonClass="button button-secundario" text="Ver" />
+            <Button buttonClass="button anadir" text="Añadir al carrito" />
+            <Link to="/ProductDetails">
+              <Button buttonClass="button button-secundario" text="Ver" />
+            </Link>
             </div>
         </div>
         </div>

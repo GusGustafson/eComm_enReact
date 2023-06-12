@@ -1,4 +1,3 @@
-import Section from "../../components/Section";
 
 function Policy() {
   return (
@@ -12,8 +11,7 @@ function Policy() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima tempora veritatis possimus, doloribus, incidunt quo, a ad eligendi eveniet perferendis hic illum consequatur consequuntur voluptatibus quas sunt commodi eos? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus saepe iste repellendus aliquid eius eum nobis deleniti perspiciatis quaerat blanditiis est laboriosam consectetur reprehenderit porro, quidem voluptates dolores numquam cupiditate?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eaque corrupti dignissimos placeat suscipit. Alias, recusandae! Excepturi perferendis dignissimos tempora ex iure, in maxime doloremque, suscipit asperiores sint enim quo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos laboriosam quaerat, nobis explicabo repudiandae error debitis quas aliquid magni, culpa sequi deleniti iure ex esse et saepe maxime nemo rem?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iste cumque adipisci libero, soluta reiciendis ea veniam nulla sequi rerum aliquid consequatur dolorem! Voluptates cum hic vel molestias recusandae quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab corrupti quaerat dolor provident, similique fuga libero dicta. Maxime asperiores, quidem impedit sint excepturi veritatis nostrum ad rem! Iure, recusandae vitae!</p>
-    </main>
-      <Section />
+      </main>
     </>
   );
 }

@@ -343,11 +343,11 @@ header .container{
     color: var(--blanco);
 }
 
-/* Página Productos */
+/* Página Todos los productos */
 
 .jumbotron{
     padding:160px 0;
-    background-image: url("../assets/images/jumbotron.jpg");
+    background-image: url("./assets/jumbotron.jpg");
     background-size: cover;
     background-position: top center;
     background-color: var(--gris);
@@ -378,6 +378,20 @@ header .container{
     border-radius: 16px;
     padding-top: 16px;
     text-align: center;
+}
+
+/* Página Detalles del producto */
+
+.aProduct{
+    overflow: hidden;
+    border: 2px solid var(--secundario);
+    border-radius: 32px;
+}
+
+.aProductSmall{
+    overflow: hidden;
+    border: 1px solid var(--secundario);
+    border-radius: 8px;
 }
 
 /* Página Login */

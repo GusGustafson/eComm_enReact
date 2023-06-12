@@ -1,4 +1,3 @@
-import Section from "../../components/Section";
 
 function Home() {
   return (
@@ -10,7 +9,7 @@ function Home() {
               <h3>Iniciar sesión</h3>
               <p>Accede con tus datos anteriores</p>
               <form>
-                <div className="input-group">
+                <div className="input-group mt-3">
                   <label htmlFor="email">Email</label>
                   <input
                     type="email"
@@ -19,7 +18,7 @@ function Home() {
                   />
                   <div className="error">Introduce una dirección correcta.</div>
                 </div>
-                <div className="input-group">
+                <div className="input-group mt-3">
                   <label htmlFor="contrasena">Contraseña</label>
                   <input
                     type="password"
@@ -46,8 +45,10 @@ function Home() {
                 descuento como cliente
               </p>
               <form>
-                <input type="text" name="nombre" placeholder="Nombre" />
-                <input type="text" name="apellido" placeholder="Apellidos" />
+                <div className="container d-flex justify-content-evenly">
+                  <input type="text" name="nombre" placeholder="Nombre" />
+                  <input type="text" name="apellido" placeholder="Apellidos" />
+                </div>
                 <input type="email" name="email" placeholder="Email" />
                 <input
                   type="password"
@@ -64,7 +65,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <Section />
     </>
   );
 }

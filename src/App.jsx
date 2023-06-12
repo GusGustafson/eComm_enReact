@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./views/Home";
 // import Header from "./components/Header";
-// import Navigator from "./components/Navigator";
+// import Navbar from "./components/Navbar";
 // import Main from "./components/Main";
 // import Card from "./components/Card";
 // import Section from "./components/Section";
@@ -16,12 +16,14 @@ import Home from "./views/Home";
 // PEEERO como ahora ya aprendimos a usar react-router-dom, ahora metemos las "import" con las referencias a las distintas
 // "páginas HTML" para usarlas con react-router-dom:
 import AllProducts from "./views/AllProducts";
+import ProductDetails from "./views/ProductDetails";
 import Layout from "./components/Layout";
 import Nosotros from "./views/Nosotros";
-// import Contact from "./views/Contact";
+import Contacto from "./views/Contacto";
 import Gadgets from "./views/Gadgets";
-// import Ofertas from "./views/Ofertas";
+import Ofertas from "./views/Ofertas";
 import Policy from "./views/Policy";
+import Carrito from "./views/Carrito";
 
 import { Routes, Route } from "react-router-dom";
 import NotFound from "./views/NotFound/NotFound";
@@ -33,13 +35,17 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="allproducts" element={<AllProducts />} />
-          <Route path="nosotros" element={<Nosotros/>}/>
+          <Route path="productDetails" element={<ProductDetails />} />
+          <Route path="nosotros" element={<Nosotros />}/>
+          <Route path="contacto" element={<Contacto />}/>
           <Route path="policy" element={<Policy />} />
           <Route path="gadgets" element={<Gadgets />} />
+          <Route path="ofertas" element={<Ofertas />} />
+          <Route path="carrito" element={<Carrito />} />
         </Route>
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="*" element={<NotFound />}/>
         {/* <Header />
-        <Navigator />
+        <Navbar />
         <Main />
         <Card cards={card} />
         <Section />
