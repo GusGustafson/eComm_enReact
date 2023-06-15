@@ -1,9 +1,8 @@
-import "../../style.css";
+import { Outlet, Link } from "react-router-dom";
 import Button from "../../components/Button";
-import { Link } from 'react-router-dom';
-import { Outlet } from "react-router-dom";
+import "../../style.css";
 
-function Card({ cards }) {
+export default function Card({ cards }) {
   return (
     <div className="container d-flex justify-content-evenly mt-5" >
       {/* Esta línea de arriba la incluyo para que me ponga las cards una junto a otra, no una encima de otra. */}
@@ -15,7 +14,7 @@ function Card({ cards }) {
         />
         <div className="contenido-producto">
             <div className="card-titulo">
-            <h5>{card.title}</h5>
+            <h5>{card.title}-{card.id}</h5>
             <div className="precio">{card.precio}<i className="bi bi-currency-euro main-color"></i></div>
             </div>
             <div className="rating">
@@ -28,7 +27,8 @@ function Card({ cards }) {
             <p>{card.descripcion}</p>
             <div className="card-actions">
             <Button buttonClass="button anadir" text="Añadir al carrito" />
-            <Link to="productdetails">
+            <Link to="123">
+            {/* <Link to="productdetails"> */}
               <Button buttonClass="button button-secundario" text="Ver" />
             </Link>
             </div>
@@ -39,5 +39,3 @@ function Card({ cards }) {
     </div>
   );
 }
-
-export default Card;

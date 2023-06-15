@@ -1,37 +1,12 @@
-import "../../style.css";
-import logo from "../../assets/logo.png";
-import Button from "../../components/Button";
+import { Link } from 'react-router-dom';
 import Card from "../../components/Card";
 import { card } from "../../components/Card/CardsDummy";
-import {Link} from 'react-router-dom';
+import Button from "../../components/Button";
+import "../../style.css";
 
-function Carrito() {
+export default function Carrito() {
     return (
       <>
-        <header>
-        <div className="container franja-superior d-flex justify-content-between">
-            <div className="d-flex">
-                <Link to="/" className="logo">
-                <img src={logo} alt="logo" width="50px" />
-                <h4>My<span className="main-color">Releevant</span>Store</h4>
-                </Link>
-            </div>
-            <div>
-                <Link to="/carrito">
-                <Button buttonClass="button button-secundario" text="Carrito" />
-                </Link>
-                <i className="bi bi-arrow-right-circle"></i>
-                <Link to="/carrito">
-                <Button buttonClass="button button-secundario" text="Forma de pago" />
-                </Link>
-                <i className="bi bi-arrow-right-circle"></i>
-                <Link to="/carrito">
-                <Button buttonClass="button button-secundario" text="Finalizar pedido" />
-                </Link>
-            </div>
-        </div>
-        </header>
-
         <main className="container">
         <div className="d-flex justify-content-between mt-3">
             <h2>Mi carrito</h2>
@@ -101,9 +76,6 @@ function Carrito() {
         <h2>Otros usuarios también compraron</h2>
         <Card cards={card} />
         </main>
-
       </>
     );
   }
-  
-  export default Carrito;

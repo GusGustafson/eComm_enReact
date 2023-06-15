@@ -1,5 +1,4 @@
-
-function Home() {
+export default function Home() {
   return (
     <>
       <div className="container text-center">
@@ -68,5 +67,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

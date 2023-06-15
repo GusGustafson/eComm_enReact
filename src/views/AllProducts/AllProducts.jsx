@@ -1,8 +1,8 @@
+import { Link } from 'react-router-dom';
 import Card from "../../components/Card";
 import { card } from "../../components/Card/CardsDummy";
-import { Link } from 'react-router-dom';
 
-function Home() {
+export default function Home() {
   return (
     <>
       <div className="jumbotron">
@@ -45,5 +45,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

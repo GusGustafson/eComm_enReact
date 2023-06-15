@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
 import "../../style.css";
 {
   /* Aquí arriba importo mi archivo CSS para que pueda usarlo en todo este componente */
 }
-import { Link } from "react-router-dom";
 
-function Navbar2() {
+export default function Navbar2() {
   return (
     <nav className="container" id="navegacion">
       <div className="col-izq">
@@ -40,5 +40,3 @@ function Navbar2() {
     </nav>
   );
 }
-
-export default Navbar2;

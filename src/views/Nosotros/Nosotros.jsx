@@ -1,5 +1,4 @@
-
-function Policy() {
+export default function Policy() {
   return (
     <>
       <main className="container">
@@ -8,5 +7,3 @@ function Policy() {
     </>
   );
 }
-
-export default Policy;

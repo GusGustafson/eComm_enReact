@@ -1,7 +1,10 @@
+import { useParams } from "react-router-dom";
 import Button from "../../components/Button";
 import check from "../../assets/check.png";
 
-function ProductDetails() {
+export default function ProductDetails() {
+    const {id} = useParams();
+
   return (
     <>
       <main className="container">
@@ -14,7 +17,7 @@ function ProductDetails() {
               width="600px" />
           </div>
           <div className="d-flex flex-column mt-5 ms-5">
-              <h2>Bicicleta Rock Ridee</h2>
+              <h2>Bicicleta Rock Ridee-{id}</h2>
               <div>
                 <p>Los actos generosos no han de ser reprimidos por fríos consejos.</p>
                 <p><b>399,50</b> <i className="bi bi-currency-euro"></i></p>
@@ -84,5 +87,3 @@ function ProductDetails() {
     </>
   );
 }
-
-export default ProductDetails;

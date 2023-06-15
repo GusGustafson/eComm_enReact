@@ -3,7 +3,7 @@ import "../../style.css";
   /* Aquí importo mi archivo CSS para que pueda usarlo en todo este componente */
 }
 
-function Main() {
+export default function Main() {
   return (
     <main className="container login">
       <div className="caja destacado">
@@ -48,5 +48,3 @@ function Main() {
     </main>
   );
 }
-
-export default Main;

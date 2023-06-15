@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Header from "./components/Header";
 import Home from "./views/Home";
 // import Header from "./components/Header";
 // import Navbar from "./components/Navbar";
@@ -8,56 +10,47 @@ import Home from "./views/Home";
 // import Footer from "./components/Footer";
 // import Button from "./components/Button";
 // Todo esto de arriba lo quitamos de aquí porque nos lo llevamos a la página de inicio "Home". También la siguiente de abajo.
-
 // import { card } from "./components/Card/CardsDummy";
 // Esta línea la añadimos para IMPORTAR el array "card" (DEBE IR ENTRE LLAVES) que EXPORTAMOS desde el archivo "CardsDummy.js".
 // De esta forma, hacemos que este "App.jsx" no esté tan congestionado de variables, arrays y objetos.
-// PEEERO como ahora ya aprendimos a usar react-router-dom, ahora metemos las "import" con las referencias a las distintas
+// PEEERO como ahora ya aprendimos a usar react-router-dom, ahora sí metemos las "import" con las referencias a las distintas
 // "páginas HTML" para usarlas con react-router-dom:
 import AllProducts from "./views/AllProducts";
 import ProductDetails from "./views/ProductDetails";
-import Layout from "./components/Layout";
 import Nosotros from "./views/Nosotros";
 import Contacto from "./views/Contacto";
+import Policy from "./views/Policy";
 import Gadgets from "./views/Gadgets";
 import Ofertas from "./views/Ofertas";
-import Policy from "./views/Policy";
 import Carrito from "./views/Carrito";
 import NotFound from "./views/NotFound/NotFound";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route element={<Header />} />
           <Route index element={<Home />} />
+
           <Route path="allproducts">
             <Route index element={<AllProducts />} />
-            <Route path="productDetails" element={<ProductDetails />} />
+            <Route path=":id" element={<ProductDetails />} />
+            {/* <Route path="productDetails" element={<ProductDetails />} /> */}
           </Route>
-          <Route path="nosotros" element={<Nosotros />}/>
-          <Route path="contacto" element={<Contacto />}/>
+
+          <Route path="nosotros" element={<Nosotros />} />
+          <Route path="contacto" element={<Contacto />} />
           <Route path="policy" element={<Policy />} />
           <Route path="gadgets" element={<Gadgets />} />
           <Route path="ofertas" element={<Ofertas />} />
           <Route path="carrito" element={<Carrito />} />
         </Route>
         <Route path="*" element={<NotFound />}/>
-        {/* <Header />
-        <Navbar />
-        <Main />
-        <Card cards={card} />
-        <Section />
-        <Footer />
-        <Button />
-        // Todo esto de arriba lo quitamos de aquí porque nos lo llevamos a la página de inicio "Home". */}
       </Routes>
-    </>
   );
 }
 
-export default App;
-
 // Si metemos otro elemento (por ejemplo, el encabezado especial del carrito) fuera del padre principal (o sea,
-// debajo de la línea 45), solo aparecería en la página donde lo llamemos (ya no saldría en todas las páginas).
+// debajo de la línea 47 "</Route>"), solo aparecería en la página donde lo llamemos (ya no saldría en todas las páginas).
+// RECUERDA: los padres acaban en ">" y envuelven hasta su etiqueta de cierre, y los hijos (y los elementos independientes) acaban en "/>".

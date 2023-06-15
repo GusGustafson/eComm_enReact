@@ -1,5 +1,4 @@
-
-function NotFound() {
+export default function NotFound() {
   return (
     <>
       <br />
@@ -7,5 +6,3 @@ function NotFound() {
     </>
   );
 }
-
-export default NotFound;

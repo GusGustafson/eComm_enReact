@@ -1,5 +1,4 @@
-
-function Contacto() {
+export default function Contacto() {
   return (
     <>
       <main className="container">
@@ -8,5 +7,3 @@ function Contacto() {
     </>
   );
 }
-
-export default Contacto;

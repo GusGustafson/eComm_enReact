@@ -5,7 +5,7 @@ import Navbar2 from './Navbar2/Navbar2';
 import Section from './Section/Section';
 import Footer from './Footer/Footer';
 
-function Layout() {
+export default function Layout() {
   return (
     <>
     <Header/>
@@ -17,5 +17,3 @@ function Layout() {
     </>
   );
 }
-
-export default Layout;

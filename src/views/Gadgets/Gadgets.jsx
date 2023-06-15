@@ -1,5 +1,4 @@
-
-function Gadgets() {
+export default function Gadgets() {
   return (
     <>
       <main className="container">
@@ -8,5 +7,3 @@ function Gadgets() {
     </>
   );
 }
-
-export default Gadgets;

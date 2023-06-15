@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import logo from "../../assets/logo.png";
 import facebook from "../../assets/facebook.png";
 import instagram from "../../assets/instagram.png";
@@ -5,9 +6,8 @@ import "../../style.css";
 {
   /* Aquí importo mi archivo CSS para que pueda usarlo en todo este componente */
 }
-import {Link} from 'react-router-dom';
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="container bg-dark text-light d-flex justify-content-evenly mt-5">
         <div className="container d-flex flex-column w-85 mt-3">
@@ -103,5 +103,3 @@ function Footer() {
     </footer>*/
   );
 }
-
-export default Footer;

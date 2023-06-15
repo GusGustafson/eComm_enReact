@@ -7,7 +7,7 @@ import "../../style.css";
   /* Aquí importo mi archivo CSS para que pueda usarlo en todo este componente */
 }
 
-function Section() {
+export default function Section() {
   return (
     <section className="container d-flex mt-5">
       {/* En esta línea de arriba incluyo "d-flex just..." para que me ponga los elementos uno junto a otro, no uno encima de otro. */}
@@ -49,5 +49,3 @@ function Section() {
     </section>
   );
 }
-
-export default Section;
