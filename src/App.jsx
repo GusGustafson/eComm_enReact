@@ -29,7 +29,7 @@ import "./App.css";
 export default function App() {
   return (
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout withUser />}>
           <Route element={<Header />} />
           <Route index element={<Home />} />
 
@@ -46,11 +46,16 @@ export default function App() {
           <Route path="ofertas" element={<Ofertas />} />
           <Route path="carrito" element={<Carrito />} />
         </Route>
+
+        {/* <Route path="/carrito" element={<Layout />}>
+          <Route path="carrito" element={<Carrito />} />
+        </Route> */}
+
         <Route path="*" element={<NotFound />}/>
       </Routes>
   );
 }
 
 // Si metemos otro elemento (por ejemplo, el encabezado especial del carrito) fuera del padre principal (o sea,
-// debajo de la línea 47 "</Route>"), solo aparecería en la página donde lo llamemos (ya no saldría en todas las páginas).
+// debajo de la línea 48 "</Route>"), solo aparecería en la página donde lo llamemos (ya no saldría en todas las páginas).
 // RECUERDA: los padres acaban en ">" y envuelven hasta su etiqueta de cierre, y los hijos (y los elementos independientes) acaban en "/>".

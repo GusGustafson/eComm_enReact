@@ -4,7 +4,7 @@ import "../../style.css";
   /* Aquí arriba importo mi archivo CSS para que pueda usarlo en todo este componente */
 }
 
-export default function Navbar2() {
+export default function Navbar2({withUser}) {
   return (
     <nav className="container" id="navegacion">
       <div className="col-izq">
@@ -27,7 +27,7 @@ export default function Navbar2() {
         </ul>
       </div>
 
-      <div className="col-der">
+    {withUser ? (<div className="col-der">
         <ul className="menu d-flex gap-3">
           <li>
             <Link to="misPedidos">Mis pedidos</Link>
@@ -36,7 +36,9 @@ export default function Navbar2() {
             <Link to="/">Logout</Link>
           </li>
         </ul>
-      </div>
+      </div>) : null
+    }
+      
     </nav>
   );
 }
