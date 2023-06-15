@@ -1,6 +1,7 @@
 import "../../style.css";
 import Button from "../../components/Button";
 import { Link } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
 function Card({ cards }) {
   return (
@@ -27,13 +28,14 @@ function Card({ cards }) {
             <p>{card.descripcion}</p>
             <div className="card-actions">
             <Button buttonClass="button anadir" text="Añadir al carrito" />
-            <Link to="/ProductDetails">
+            <Link to="productdetails">
               <Button buttonClass="button button-secundario" text="Ver" />
             </Link>
             </div>
         </div>
         </div>
       ))}
+    <Outlet />
     </div>
   );
 }
