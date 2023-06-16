@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import Navbar2 from '../../components/Navbar2/Navbar2';
 import Card from "../../components/Card";
 import { card } from "../../components/Card/CardsDummy";
 
-export default function Home() {
+export default function Home(withUser) {
   return (
     <>
+      <Navbar2 withUser={withUser}/>
       <div className="jumbotron">
         <div className="container">
             <h1>Los mejores gadgets de octubre</h1>

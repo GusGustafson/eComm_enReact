@@ -36,7 +36,6 @@ export default function App() {
           <Route path="allproducts">
             <Route index element={<AllProducts />} />
             <Route path=":id" element={<ProductDetails />} />
-            {/* <Route path="productDetails" element={<ProductDetails />} /> */}
           </Route>
 
           <Route path="nosotros" element={<Nosotros />} />
@@ -57,5 +56,5 @@ export default function App() {
 }
 
 // Si metemos otro elemento (por ejemplo, el encabezado especial del carrito) fuera del padre principal (o sea,
-// debajo de la línea 48 "</Route>"), solo aparecería en la página donde lo llamemos (ya no saldría en todas las páginas).
+// debajo de la línea 47 "</Route>"), solo aparecería en la página donde lo llamemos (ya no saldría en todas las páginas).
 // RECUERDA: los padres acaban en ">" y envuelven hasta su etiqueta de cierre, y los hijos (y los elementos independientes) acaban en "/>".

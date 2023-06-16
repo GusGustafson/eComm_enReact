@@ -1,39 +1,17 @@
+import Navbar2 from '../../components/Navbar2/Navbar2';
+import Login from "../../components/Login";
+
 export default function Home() {
   return (
     <>
+      <Navbar2 />
       <div className="container text-center">
         <div className="row">
           <div className="col">
             <div className="caja destacado">
               <h3>Iniciar sesión</h3>
               <p>Accede con tus datos anteriores</p>
-              <form>
-                <div className="input-group mt-3">
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Ejemplo: augusto@gmail.com"
-                  />
-                  <div className="error">Introduce una dirección correcta.</div>
-                </div>
-                <div className="input-group mt-3">
-                  <label htmlFor="contrasena">Contraseña</label>
-                  <input
-                    type="password"
-                    name="contrasena"
-                    placeholder="Contraseña"
-                  />
-                  <div className="error">
-                    Introduce una contraseña correcta.
-                  </div>
-                </div>
-                <input
-                  type="submit"
-                  value="Iniciar sesión"
-                  className="button button-resalto"
-                />
-              </form>
+              <Login />
             </div>
           </div>
           <div className="col">
@@ -44,7 +22,7 @@ export default function Home() {
                 descuento como cliente
               </p>
               <form>
-                <div className="container d-flex justify-content-evenly">
+                <div className="d-flex justify-content-between">
                   <input type="text" name="nombre" placeholder="Nombre" />
                   <input type="text" name="apellido" placeholder="Apellidos" />
                 </div>

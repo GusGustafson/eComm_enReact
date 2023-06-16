@@ -52,10 +52,12 @@ export default function Header() {
             </button>
           </div>
           <div className="d-flex">
-          <Link to="carrito">
-            <Button buttonClass="button button-resalto" text="Carrito" id="comprar" />
-          </Link>
-            <span>1</span>
+            <Link to="carrito">
+              <Button buttonClass="button button-resalto" text="Carrito" id="comprar" />
+              <div id="comprar">
+                <span>1</span>
+              </div>
+            </Link>
           </div>
         </div>
       </header>

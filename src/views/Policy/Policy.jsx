@@ -1,6 +1,9 @@
+import Navbar2 from '../../components/Navbar2/Navbar2';
+
 export default function Policy() {
   return (
     <>
+      <Navbar2 />
       <main className="container">
         <h3>Política de privacidad</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi delectus deserunt alias totam reprehenderit pariatur recusandae possimus earum placeat nulla accusamus officiis aliquid, molestiae impedit amet voluptatem illum tenetur ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam facere, praesentium mollitia voluptatum rem minima rerum eum, sit veritatis tempore, nesciunt dignissimos voluptas exercitationem doloribus commodi facilis. Earum, molestiae.</p>

@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
+import Navbar2 from '../../components/Navbar2/Navbar2';
 import Button from "../../components/Button";
 import check from "../../assets/check.png";
 
-export default function ProductDetails() {
+export default function ProductDetails(withUser) {
     const {id} = useParams();
 
   return (
     <>
+      <Navbar2 withUser={withUser}/>
       <main className="container">
         <div className="d-flex">
           <div className="aProduct">
