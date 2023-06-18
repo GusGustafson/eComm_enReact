@@ -10,19 +10,19 @@ export default function Navbar2({withUser}) {
       <div className="col-izq">
         <ul className="menu d-flex gap-3">
           <li>
-            <Link to="allproducts">Todos los productos</Link>
+            <Link to="/allproducts">Todos los productos</Link>
           </li>
           <li>
-            <Link to="nosotros">Sobre nosotros</Link>
+            <Link to="/nosotros">Sobre nosotros</Link>
           </li>
           <li>
-            <Link to="contacto">Contacto</Link>
+            <Link to="/contacto">Contacto</Link>
           </li>
           <li>
-            <Link to="gadgets">Gadgets</Link>
+            <Link to="/gadgets">Gadgets</Link>
           </li>
           <li>
-            <Link to="ofertas">Ofertas</Link>
+            <Link to="/ofertas">Ofertas</Link>
           </li>
         </ul>
       </div>
@@ -30,7 +30,7 @@ export default function Navbar2({withUser}) {
     {withUser ? (<div className="col-der">
         <ul className="menu d-flex gap-3">
           <li>
-            <Link to="misPedidos">Mis pedidos</Link>
+            <Link to="/misPedidos">Mis pedidos</Link>
           </li>
           <li>
             <Link to="/">Logout</Link>
@@ -42,3 +42,5 @@ export default function Navbar2({withUser}) {
     </nav>
   );
 }
+
+// Acuérdate de poner la barra diagonal delante del valor en todos los "<Link to="">" para que te lleven al raíz, no a "padre/valor".

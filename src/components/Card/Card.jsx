@@ -27,7 +27,7 @@ export default function Card({ cards }) {
             <p>{card.descripcion}</p>
             <div className="card-actions">
             <Button buttonClass="button anadir" text="Añadir al carrito" />
-            <Link to={`${card.id}`}>
+            <Link to={`/allproducts/${card.id}`}>
               <Button buttonClass="button button-secundario" text="Ver" />
             </Link>
             </div>
