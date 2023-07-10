@@ -11,10 +11,10 @@ export default function Login() {
     password: ""
   });
   
-  function handleAuth(e) {
+  function handleAuth(e) { // Este evento ("e") es cuando se produce el evento "onChange" (ver línea 26).
     setAuth({
-      ...auth,
-      [e.target.name]:e.target.value,
+      ...auth, // Esto deja todo el "auth" igual, salvo lo que viene detrás ("e.target.name").
+      [e.target.name]:e.target.value, // Aquí hacemos que esa parte que hemos sacado del auth en la línea de arriba, lo igualemos al value del target.
     });
   }
 
