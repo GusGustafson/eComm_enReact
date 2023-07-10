@@ -1,54 +1,76 @@
 import { useState } from "react";
+import LoginView from "./LoginView";
+import { useAuthContext } from "../../contexts/AuthContext";
 import "../../style.css";
-{
-  /* Aquí importo mi archivo CSS para que pueda usarlo en todo este componente */
-}
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  // Esta es la función Login nueva, con el login de React:
+  const { login } = useAuthContext();
+  const [auth, setAuth] = useState({
+    email: "",
+    password: ""
+  });
+  
+  function handleAuth(e) {
+    setAuth({
+      ...auth,
+      [e.target.name]:e.target.value,
+    });
+  }
 
-  const handleUsername = (e) => setUsername(e.target.value);
-  const handlePassword = (e) => setPassword(e.target.value);
-
-  const handleSubmit = (e) => {
+  function onSubmit(e) {
     e.preventDefault();
-    if (username === "root@root" && password === "1234") {
-      alert("Sesión iniciada");
-    } else {
-      alert("Error al iniciar sesión");
-    }
-  };
+    login(auth);
+  }
 
-  return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <div className="input-group mt-3">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Ejemplo: augusto@gmail.com"
-            onChange={handleUsername}
-          />
-          <div className="error">Introduce una dirección correcta.</div>
-        </div>
-        <div className="input-group mt-3">
-          <label htmlFor="contrasena">Contraseña</label>
-          <input
-            type="password"
-            name="contrasena"
-            placeholder="Contraseña"
-            onChange={handlePassword}
-          />
-          <div className="error">Introduce una contraseña correcta.</div>
-        </div>
-        <input
-          type="submit"
-          value="Iniciar sesión"
-          className="button button-resalto"
-        />
-      </form>
-    </>
-  );
+  return <LoginView auth={auth} onChange={handleAuth} onSubmit={onSubmit}/>;
+
+  // Esta es mi función Login antigua, antes de usar el login de react:
+  // const [username, setUsername] = useState("");
+  // const [password, setPassword] = useState("");
+
+  // const handleUsername = (e) => setUsername(e.target.value);
+  // const handlePassword = (e) => setPassword(e.target.value);
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (username === "augusto@mail.com" && password === "Augusto1234") {
+  //     alert("Sesión iniciada");
+  //   } else {
+  //     alert("Error al iniciar sesión");
+  //   }
+  // };
+
+  // Este es mi return antiguo, antes de usar el return de react:
+  // return (
+  //   <>
+  //     <form onSubmit={handleSubmit}>
+  //       <div className="input-group mt-3">
+  //         <label htmlFor="email">Email</label>
+  //         <input
+  //           type="email"
+  //           name="email"
+  //           placeholder="Ejemplo: augusto@mail.com"
+  //           onChange={handleUsername}
+  //         />
+  //         <div className="error">Introduce una dirección correcta.</div>
+  //       </div>
+  //       <div className="input-group mt-3">
+  //         <label htmlFor="contrasena">Contraseña</label>
+  //         <input
+  //           type="password"
+  //           name="contrasena"
+  //           placeholder="Contraseña"
+  //           onChange={handlePassword}
+  //         />
+  //         <div className="error">Introduce una contraseña correcta.</div>
+  //       </div>
+  //       <input
+  //         type="submit"
+  //         value="Iniciar sesión"
+  //         className="button button-resalto"
+  //       />
+  //     </form>
+  //   </>
+  // );
 }
