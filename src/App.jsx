@@ -31,17 +31,19 @@ export default function App() {
 
           {/* Rutas privadas */}
           <Route element={<PrivateRoute />}>
-            <Route path="allproducts" element={<Layout withUser />}>
-              <Route index element={<AllProducts />} />
-              <Route path=":id" element={<ProductDetails />} />
-            </Route>
+            <Route element={<Layout withUser />}>
+              <Route path="allproducts">
+                <Route index element={<AllProducts />} />
+                <Route path=":id" element={<ProductDetails />} />
+              </Route>
 
-            <Route path="nosotros" element={<Nosotros />} />
-            <Route path="contacto" element={<Contacto />} />
-            <Route path="policy" element={<Policy />} />
-            <Route path="gadgets" element={<Gadgets />} />
-            <Route path="ofertas" element={<Ofertas />} />
-            <Route path="carrito" element={<Carrito />} />
+              <Route path="nosotros" element={<Nosotros />} />
+              <Route path="contacto" element={<Contacto />} />
+              <Route path="policy" element={<Policy />} />
+              <Route path="gadgets" element={<Gadgets />} />
+              <Route path="ofertas" element={<Ofertas />} />
+              <Route path="carrito" element={<Carrito />} />
+            </Route>
           </Route>
 
           {/* <Route path="/carrito" element={<Layout />}>
