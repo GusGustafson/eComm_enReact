@@ -23,5 +23,5 @@ export default function Layout() {
 }
 
 // En la línea 11, "existUserProp" es el valor de la prop que está recibiendo la función "Layout".
-// Ese valor es el que debe coincidir con el de la lína 17.
+// Ese valor es el que debe coincidir con el de la línea 17.
 // Y el "existUser" de la línea 17 es el que hay que poner al final de su línea correspondiente en App.jsx.

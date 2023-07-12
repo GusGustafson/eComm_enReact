@@ -1,5 +1,6 @@
 import Navbar2 from '../../components/Navbar2/Navbar2';
-import Login from "../../components/Login";
+// import Login from "../../components/Login";
+import LoginFormikBasic from "../../components/LoginFormikBasic/LoginFormikBasic";
 
 export default function Home() {
   return (
@@ -11,15 +12,15 @@ export default function Home() {
             <div className="caja destacado">
               <h3>Iniciar sesión</h3>
               <p>Accede con tus datos anteriores</p>
-              <Login />
+              {/* <Login /> */}
+              <LoginFormikBasic />
             </div>
           </div>
           <div className="col">
             <div className="caja">
               <h3>Regístrate</h3>
               <p>
-                Crea una cuenta en My Releevant Store para conseguir tu primer
-                descuento como cliente
+                Crea una cuenta para conseguir tu primer descuento como cliente
               </p>
               <form>
                 <div className="d-flex justify-content-between">
