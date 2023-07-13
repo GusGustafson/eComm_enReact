@@ -1,18 +1,10 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuthContext } from "../../contexts/AuthContext";
 import "../../style.css";
-
+{
+  /* Aquí arriba importo mi archivo CSS para que pueda usarlo en todo este componente */
+}
 
 export default function Navbar2({withUser}) {
-  const { logout } = useAuthContext();
-  const [anchorElUser, setAnchorElUser] = useState(null);
-
-  function loggingOut() {
-    setAnchorElUser(null);
-    logout();
-  }
-
   return (
     <nav className="container" id="navegacion">
       <div className="col-izq">
@@ -41,7 +33,7 @@ export default function Navbar2({withUser}) {
             <Link to="/misPedidos">Mis pedidos</Link>
           </li>
           <li>
-            <Link to="/" onClick={loggingOut}>Logout</Link>
+            <Link to="/">Logout</Link>
           </li>
         </ul>
       </div>) : null
