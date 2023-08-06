@@ -1,5 +1,6 @@
 import { useState } from "react";
-import LoginView from "./LoginView";
+// import LoginView from "./LoginView";
+import LoginView_versionMUI from "./LoginView_versionMUI";
 import { useAuthContext } from "../../contexts/AuthContext";
 import "../../style.css";
 
@@ -23,7 +24,7 @@ export default function Login() {
     login(auth);
   }
 
-  return <LoginView auth={auth} onChange={handleAuth} onSubmit={onSubmit}/>;
+  return <LoginView_versionMUI auth={auth} onChange={handleAuth} onSubmit={onSubmit}/>;
 
   // Esta es mi función Login antigua, antes de usar el login de react:
   // const [username, setUsername] = useState("");

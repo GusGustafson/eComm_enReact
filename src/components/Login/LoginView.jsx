@@ -9,6 +9,7 @@ export default function LoginView({ auth, onChange, onSubmit }) {
       <div className="input-group mt-3">
         <label htmlFor="email">Email</label>
         <input
+          id="email"
           type="email"
           name="email"
           placeholder="Ejemplo: augusto@mail.com"
@@ -18,10 +19,11 @@ export default function LoginView({ auth, onChange, onSubmit }) {
         <div className="error">Introduce una dirección correcta.</div>
       </div>
       <div className="input-group mt-3">
-        <label htmlFor="contrasena">Contraseña</label>
+        <label htmlFor="password">Contraseña</label>
         <input
+          id="password"
           type="password"
-          name="contrasena"
+          name="password"
           placeholder="Contraseña"
           value={auth.password}
           onChange={onChange}
@@ -33,14 +35,14 @@ export default function LoginView({ auth, onChange, onSubmit }) {
           </Alert>
         ) : null}
       </div>
-      <input
+      {/* <input
         type="submit"
         value="Iniciar sesión"
         className="button button-resalto"
-      />
-      {/* <Button type="submit" variant="contained" color="primary">
+      /> */}
+      <Button type="submit" fullWidth variant="contained" color="primary">
         Iniciar sesión
-      </Button> */}
+      </Button>
     </form>
   );
 }

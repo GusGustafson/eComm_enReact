@@ -2,11 +2,10 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useAuthContext } from "../../contexts/AuthContext";
 
 export default function PrivateRoute() {
-  // Comprobar en el contexto si existe usuario.
-
+  // Desestructuramos el objeto "user" del contexto, que es lo único que nos interesa ahora:
   const { user } = useAuthContext();
-
-  if (!user) { // En la ruta privada ("PrivateRoute"), si NO hay user ("!user"), te lleva a la ruta pública ("/").
+  // Comprobamos si existe el usuario. SI NO EXISTE, accedemos (navegamos) a la vista "/" (o sea, la vista "pública"):
+  if (!user) {
     return <Navigate to="/" />;
   }
 

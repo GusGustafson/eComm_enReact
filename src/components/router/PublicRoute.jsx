@@ -2,11 +2,10 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useAuthContext } from "../../contexts/AuthContext";
 
 export default function PublicRoute() {
-  // Comprobar en el contexto si existe usuario.
-
+  // Desestructuramos el objeto "user" del contexto, que es lo único que nos interesa ahora:
   const { user } = useAuthContext();
-
-  if (user) { // En la ruta pública ("PublicRoute"), si SÍ hay user ("user"), te lleva a la ruta privada ("/Characters").
+  // Comprobamos si existe el usuario. SI SÍ EXISTE, accedemos (navegamos) a la vista allproducts (o sea, la vista "privada"):
+  if (user) {
     return <Navigate to="/allproducts" />;
   }
 

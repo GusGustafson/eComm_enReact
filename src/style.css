@@ -244,6 +244,7 @@ una al lado de la otra. En teoría, esto es solo para el último ejercicio de "P
     padding: 40px;
     border: 2px solid var(--gris);
     border-radius: 32px;
+    margin-top: 8px;
 }
 
 .caja h3{
@@ -252,6 +253,8 @@ una al lado de la otra. En teoría, esto es solo para el último ejercicio de "P
 
 .caja.destacado{
     border-color: var(--principal);
+    border-radius: 32px;
+    margin-top: 8px;
 }
 
 /* Este próximo elemento es mío. Hay que comprobar si es necesario. */

@@ -43,7 +43,7 @@ export default function Section() {
           src={ofertas} alt="iconoOfertas" name="ofertasUnicas" width="50px" height="50px" />
         <div>
           <h5>Ofertas únicas</h5>
-          <h6>Precios de mayorista</h6>
+          <h6 id="testingCypress">Precios de mayorista</h6>
         </div>
       </div>
     </section>

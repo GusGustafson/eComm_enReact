@@ -1,31 +1,35 @@
 import { TextField, Alert, Button } from "@mui/material";
 import { useAuthContext } from "../../contexts/AuthContext";
-//import { Form } from "formik";
+import { Form } from "formik";
 
 export default function LoginView({ formik }) {
   const { errorMessage } = useAuthContext();
   const { values, touched, errors, handleChange, handleSubmit } = formik;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <TextField
-        name="email"
-        value={values.email}
-        label="Email"
-        size="large"
-        fullWidth="true"
         margin="normal"
+        required
+        fullWidth
+        id="email"
+        label="Dirección de correo electrónico"
+        name="email"
+        size="large"
+        value={values.email}
         onChange={handleChange}
         error={touched.email && Boolean(errors.email)}
         helperText={touched.email && errors.email}
       />
       <TextField
-        name="password"
+        margin="normal"
+        required
+        fullWidth
+        id="password"
         label="Contraseña"
+        name="password"
         type="password"
         size="large"
-        fullWidth="true"
-        margin="normal"
         value={values.password}
         onChange={handleChange}
         error={touched.password && Boolean(errors.password)}
@@ -36,9 +40,9 @@ export default function LoginView({ formik }) {
           {errorMessage}
         </Alert>
       ) : null}
-      <Button type="submit" variant="contained" color="primary" size="large" fullWidth="true">
+      <Button id="loginButton" type="submit" fullWidth variant="contained" size="large">
         Iniciar sesión
       </Button>
-    </form>
+    </Form>
   );
 }
